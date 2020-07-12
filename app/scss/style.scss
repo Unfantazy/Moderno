@@ -915,6 +915,7 @@
     border: none;
     font-size: 16px;
     color: #90a4ae;
+    outline: transparent;
 
     &.active {
       color: $green;
@@ -945,6 +946,7 @@ button.icon-sort {
   .product__item {
     max-width: 270px;
     background-color: #fff;
+    transition: all .5s;
   }
 
   .product__item-img {
@@ -981,7 +983,6 @@ button.icon-sort {
   margin-bottom: 30px;
 }
 
-.pagination {}
 
 .pagination__list {
   li {
@@ -1010,9 +1011,112 @@ button.icon-sort {
       background-color: $red;
       color: #fff;
     }
-
   }
 }
+
+.product__item-text {
+  display: none;
+}
+
+.product__item-price {
+  span {
+    display: none;
+  }
+}
+
+.product__item-list {
+  display: none;
+
+  .icon-comment-o,
+  .icon-heart-o {
+    display: inline-block;
+    font-size: 12px;
+    color: #70838d;
+    padding-left: 50px;
+    border-left: 1px solid #aeb4bb;
+    position: relative;
+
+    span {
+      @include f500;
+      color: $bg;
+    }
+
+    &::before {
+      font-size: 16px;
+      color: $green;
+      position: absolute;
+      left: 20px;
+      top: 0;
+
+    }
+
+
+  }
+
+  .icon-comment-o {
+    padding-right: 30px;
+
+    &::before {
+      top: -2px;
+    }
+  }
+}
+
+.product-page__items {
+  .product__item {
+    &.list {
+      max-width: 100%;
+
+      .product__item-img {
+        width: 240px;
+        float: left;
+        min-height: 100%;
+      }
+
+      .product__item-text {
+        display: block;
+        font-size: 14px;
+        color: #70838d;
+        font-weight: 400;
+        margin-top: 15px;
+        margin-bottom: 5px;
+      }
+
+      .product__item-price {
+        font-size: 30px;
+
+
+        span {
+          display: block;
+          font-size: 13px;
+          color: #aeb4bb;
+          font-weight: 400;
+          margin-top: 30px;
+        }
+      }
+
+      .product__item-name {
+        max-width: 480px;
+      }
+
+      .product__item-content {
+        padding-top: 23px;
+      }
+
+      .product__item-list {
+        display: block;
+      }
+
+      .product__item-star {
+        padding-right: 30px;
+        margin-left: auto;
+      }
+
+    }
+  }
+}
+
+
 
 
 // end product page
