@@ -36,7 +36,11 @@ $(function () {
 
   });
 
-  var mixer = mixitup('.products__inner-box');
+
+  if ($('.products__inner-box').length) {
+    var mixer = mixitup('.products__inner-box');
+  }
+  // var mixer = mixitup('.products__inner-box');
 
 
 });
