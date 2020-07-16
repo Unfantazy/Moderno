@@ -490,6 +490,7 @@
 
 }
 
+
 //end modal
 
 
@@ -1934,6 +1935,104 @@ button.icon-sort {
 
 //end product-one
 
+//page-404 start
 
+.page-404__wrapper,
+.about__wrapper {
+  border: 1px solid #dcdcdc;
+  margin-bottom: 150px;
+}
+
+.page-404__head,
+.about__head {
+  background-color: #fff;
+  @include f500;
+  color: #444444;
+  font-size: 24px;
+  padding: 23px 27px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.page-404__inner {
+  background-color: #8bc34a;
+  text-align: center;
+  color: #fff;
+}
+
+.page-404__404 {
+  font-size: 300px;
+  font-weight: 800;
+  padding-top: 70px;
+  line-height: 300px;
+  position: relative;
+  padding-bottom: 20px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/error.png);
+    width: 157px;
+    height: 301px;
+    margin-left: 20px;
+    top: 60px;
+
+  }
+
+}
+
+.page-404__title {
+  margin-bottom: 30px;
+  @include f300;
+  font-size: 30px;
+
+}
+
+.page-404__text {
+  font-size: 18px;
+  max-width: 501px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.page-404__link {
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  padding: 20px 30px 16px;
+  border-radius: 4px;
+  margin-bottom: 100px;
+}
+
+//page-404 end
+
+
+//about start
+
+.about__inner {
+  padding: 0px 50px;
+}
+
+.about__wrapper {
+  background-color: #fff;
+}
+
+.about__box {
+  h3 {
+    font-size: 20px;
+    @include f700;
+    color: #444;
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 15px;
+    margin-bottom: 40px;
+    color: #707070;
+  }
+}
+
+//about end
 
 @import 'media';
